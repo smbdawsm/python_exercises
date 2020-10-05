@@ -3,5 +3,5 @@ minuts = time_in_second // 60
 seconds = time_in_second % 60
 hours = minuts // 60
 minuts_for_answer = minuts % 60
-print(hours, ':', minuts_for_answer , ':', seconds )
+print(f"{hours}:{minuts_for_answer}:{seconds}")
 
