@@ -7,17 +7,22 @@
 то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после этого завершить программу.
  '''
 
-def summa(string):
-    if string == 'exit':
-        return None
-    else:
+def summa(string, n=0):
         mylist =string.split()
         theSum = 0 
         try:
             for i in mylist:
-                theSum = theSum + int(i)
+                if i == 'exit':
+                    n = mylist.index('exit')
+                    break
+                else:
+                    theSum = theSum + int(i)                                    
             print(f' Вы ввели {mylist} Их сумма {theSum}')
-        except ValueError as err:
+            if mylist[n] == 'exit':
+                return None
+            else:
+                pass
+        except (ValueError, IndexError) as err:
             print('Некорректный ввод! Вводите числа пожалуйста')
         summa(input('Введите ваши числа. Или введите "exit" для выхода... '))
 
