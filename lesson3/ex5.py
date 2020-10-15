@@ -9,6 +9,7 @@
 
 def summa(string, n=0):
         mylist =string.split()
+        LastSum = 0
         theSum = 0 
         try:
             for i in mylist:
@@ -16,8 +17,9 @@ def summa(string, n=0):
                     n = mylist.index('exit')
                     break
                 else:
-                    theSum = theSum + int(i)                                    
-            print(f' Вы ввели {mylist} Их сумма {theSum}')
+                    theSum = theSum + int(i) 
+                    LastSum = LastSum + theSum                                   
+            print(f' Вы ввели {mylist} Их сумма {theSum}, Общая сумма {LastSum}')
             if mylist[n] == 'exit':
                 return None
             else:

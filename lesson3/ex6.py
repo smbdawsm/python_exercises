@@ -4,7 +4,8 @@
 Каждое слово состоит из латинских букв в нижнем регистре. Сделать вывод исходной строки, но
  каждое слово должно начинаться с заглавной буквы. Необходимо использовать написанную ранее функцию int_func().
 '''
-def int_func(word,good_word=[]):
+def int_func(word):
+    good_word=[]
     for letter in word:
         if ord(letter) >= 97 and ord(letter) <= 122:
             good_word.append(letter)
